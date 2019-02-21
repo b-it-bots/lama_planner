@@ -7,12 +7,7 @@ UNPACK_CMD = unzip -d ../$(SOURCE_DIR)/
 include $(shell rospack find mk)/download_unpack_build.mk
 
 lama_planner: $(SOURCE_DIR)/unpacked
-	echo "HELLO: " $(SOURCE_DIR)
-	python $(SOURCE_DIR)/ipc2018-classical-explicit-baseline-planners-b7b739ba6ccd/build.py
-
-clean:
-	$(MAKE) -C "$(SOURCE_DIR)/seq-sat-mercury/src/preprocess" clean
-	$(MAKE) -C "$(SOURCE_DIR)/seq-sat-mercury/src/search" clean
-
-wipe:
-	rm -rf build
+	rm build/ipc-2018-seq-sat.zip
+	mv $(SOURCE_DIR)/ipc2018-classical-explicit-baseline-planners-b7b739ba6ccd/* $(SOURCE_DIR)/
+	rm -r $(SOURCE_DIR)/ipc2018-classical-explicit-baseline-planners-b7b739ba6ccd
+	python $(SOURCE_DIR)/build.py
