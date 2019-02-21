@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>lama_planner</name>
+  <version>1.0.0</version>
+  <description>IPC LAMA 2011 planner</description>
+
+  <maintainer email="sushant.chavan@inf.h-brs.de">Sushant Vijay Chavan</maintainer>
+  <maintainer email="ahmed.abdelrahman@inf.h-brs.de">Ahmed Faisal Abdelrahman</maintainer>
+
+  <license>IPC 2018 open source code release license</license>
+
+  <url type="website">https://bitbucket.org/ipc2018-classical/explicit-baseline-planners/src/ipc-2018-seq-sat/</url>
+
+  <author email="silvia.richter@nicta.com.au">Silvia Richter</author>
+  <author email="westpham@informatik.uni-freiburg.de">Matthias Westphal</author>
+  <author email="helmert@informatik.uni-freiburg.de">Malte Helmert</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>mk</build_depend>
+  
+</package>
