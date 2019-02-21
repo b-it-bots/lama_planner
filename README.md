@@ -1,30 +1,10 @@
-mercury_planner
+lama_planner
 ===============
 
-Mercury planner is a task planner from International Planning Competition 2014 (IPC) created by 
+The LAMA 2011 planner is built on the Fast Downward planning system and uses the PDDL format. It was used as baseline planner in the International Planning Competition (IPC) 2018. The planner was created by Silvia Richter (NICTA) and Matthias Westphal (Albert-Ludwigs-Universitat Freiburg).
 
-Michael Katz and Jörg Hoffmann from Saarland University, Germany. The source of the planner is
+The source of the planner (as presented in IPC 2018) can be found [here](https://bitbucket.org/ipc2018-classical/explicit-baseline-planners/src/ipc-2018-seq-sat/)
 
-provided under the following url:
+This package downloads, unzips, and builds the files found there. The planner is then ready for use.
 
-        https://helios.hud.ac.uk/scommv/IPC-14/repo_planners/Mercury-fixed.zip
-        
-This package downloads that file, extracts only the sequential satisfactory folder (seq-sat-mercury)
-
-and compiles it.
-
-The dependencies of the planner are:
-
-          sudo apt-get install bison flex gawk g++-multilib pypy
-          
-NOTE: Keep in mind that the script repository.debs at the root of mas_third_party_software installs
-
-those dependencies along with all the mas_third_party_software dependencies for the rest of the packages.
-
-
-Manual installation of the planner
-==================================
-
-If you want to perform a manual installation of the planner, you could follow the instructions under
-
-        manual_installation.md
+The planner does not require any particular dependencies that are not included in the repository.debs script.
