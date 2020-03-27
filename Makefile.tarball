@@ -1,15 +1,11 @@
 all: lama_planner
 
-TARBALL = build/ipc-2018-seq-sat.zip
-TARBALL_URL = 'https://bitbucket.org/ipc2018-classical/explicit-baseline-planners/get/ipc-2018-seq-sat.zip'
-SOURCE_DIR = build/LAMA
-UNPACK_CMD = unzip -d ../$(SOURCE_DIR)/
-ZIPFILE = build/ipc-2018-seq-sat.zip
-UNZIP_DIR = "$(SOURCE_DIR)/ipc2018-classical-explicit-baseline-planners-b7b739ba6ccd"
-include $(shell rospack find mk)/download_unpack_build.mk
+TARBALL=fast-downward-19.06.tar.gz
+TARBALL_URL=http://www.fast-downward.org/Releases/19.06?action=AttachFile&do=get&target=fast-downward-19.06.tar.gz
 
-lama_planner: $(SOURCE_DIR)/unpacked
-	rm -f $(ZIPFILE)
-	if [ -d $(UNZIP_DIR)/ ]; then mv $(UNZIP_DIR)/* $(SOURCE_DIR)/; fi
-	if [ -d $(UNZIP_DIR)/ ]; then rm -r $(UNZIP_DIR); fi
-	python $(SOURCE_DIR)/build.py
+lama_planner:
+	wget "$(TARBALL_URL)" -O fast-downward-19.06.tar.gz
+	tar sxvf $(TARBALL)
+	mv fast-downward-19.06 fast-downward
+	rm -f $(TARBALL)
+	python fast-downward/build.py
