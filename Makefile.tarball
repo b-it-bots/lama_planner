@@ -6,6 +6,7 @@ TARBALL_URL=http://www.fast-downward.org/Releases/19.06?action=AttachFile&do=get
 lama_planner:
 	wget "$(TARBALL_URL)" -O fast-downward-19.06.tar.gz
 	tar sxvf $(TARBALL)
-	mv fast-downward-19.06 fast-downward
+	[ -d fast-downward ] && rm -rf fast-downward/*
+	mv fast-downward-19.06/* fast-downward
 	rm -f $(TARBALL)
 	python fast-downward/build.py
