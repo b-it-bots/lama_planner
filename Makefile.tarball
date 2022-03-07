@@ -9,4 +9,4 @@ lama_planner:
 	if [ -d fast-downward ]; then rm -rf fast-downward; fi
 	mv fast-downward-20.06 fast-downward
 	rm -f $(TARBALL)
-	python fast-downward/build.py
+	python3 fast-downward/build.py
